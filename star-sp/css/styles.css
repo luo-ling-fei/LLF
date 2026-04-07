@@ -10,6 +10,7 @@ body {
   margin: 0;
   padding: 0;
   font-size: 16px;
+  overflow-x: hidden; 
 }
 
 .container {
@@ -408,6 +409,7 @@ body {
 .fortune-card {
   width: 337px;
   padding: 20px;
+  margin: 0 auto;
   background: #d5b3dd;
   border-radius: 40px;
   text-align: center;
