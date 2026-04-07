@@ -407,7 +407,8 @@ body {
 
 .lucky-{margin-top: 40px;}
 .fortune-card {
-  width: 337px;
+  width: 90%;
+  max-width: 337px;
   padding: 20px;
   margin: 0 auto;
   background: #d5b3dd;
