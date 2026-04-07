@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/reset.css">
+    <script src="js/listen.js" defer></script>
+    <title>聴読練習</title>
+</head>
+<body>
+    <div class="header">
+           <div class="logo">
+              <a href="home.html"><img src="./img/logo.png"></a>
+           </div>
+    
+          <div class="user">
+            <img src="./img/wolf.png" onclick="location.href='user.html'">
+          </div>
+      </div>
+
+      <h2>聴読練習</h2>
+          <div class="control-bar">
+               <div class="arrow" onclick="prev()">◀</div>
+               <div class="label">文章</div>
+               <div class="arrow" onclick="next()">▶</div>
+               <div class="play-btn" id="playBtn" onclick="toggleSpeech()">▶</div>
+          </div>
+
+    <!-- 文章 -->
+    <div id="article-box"></div>
+
+    <!-- 底部按钮（图片） -->
+    <div class="bottom-bar">
+        <img src="./img/sound.png" class="icon-btn" id="micBtn" onclick="startRecording()">
+        <img src="./img/img4-hear.png" class="icon-btn" onclick="playRecording()">
+    </div>
+
+</div>
+</body>
+</html>

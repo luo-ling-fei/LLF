@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/reset.css">
+    <script src="js/memory.js" defer></script>
+    <title>単語記憶</title>
+</head>
+<body>
+    <div class="header">
+           <div class="logo">
+              <a href="home.html"><img src="./img/logo.png"></a>
+           </div>
+    
+          <div class="user">
+            <img src="./img/wolf.png" onclick="location.href='user.html'">
+          </div>
+    </div>
+
+      <h2>単語記憶</h2>
+
+<div id="menuPage" class="memory-container">
+    <div class="memory-btn" onclick="startNew()">新学</div>
+    <div class="memory-btn" onclick="startReview()">復習</div>
+</div>
+
+<!-- ===== 练习页（默认隐藏） ===== -->
+<div id="practicePage" style="display:none; text-align:center; margin-top:40px;">
+    <button onclick="goBack()">← 戻る</button>
+    <div id="question" style="margin:30px 0; font-size:24px;"></div>
+    <input type="text" id="answer" style="padding:10px; width:60%;"><br><br>
+    <button onclick="checkAnswer()">確認</button>
+</div>
+
+
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/reset.css">
+    <script src="js/word.js" defer></script>
+    <title>単語ノート</title>
+</head>
+<body>
+    <div class="header">
+           <div class="logo">
+              <a href="home.html"><img src="./img/logo.png"></a>
+           </div>
+    
+          <div class="user">
+            <img src="./img/wolf.png" onclick="location.href='user.html'">
+          </div>
+      </div>
+
+      <h2>単語ノート</h2>
+      <!-- 输入区域 -->
+          <div class="input-area">
+                <input id="wordInput" placeholder="単語">
+                <input id="meanInput" placeholder="翻訳">
+                <input id="exampleInput" placeholder="例句">
+                <button onclick="addWord()">追加</button>
+          </div>
+
+       <!-- 表头 -->
+           <div class="table-header">
+                <div>単語</div>
+                <div>翻訳</div>
+                <div>例句</div>
+                <div></div> 
+          </div>
+
+       <!-- 单词列表 -->
+           <div id="wordList"></div>
+</body>
+</html>

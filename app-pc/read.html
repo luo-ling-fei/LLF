@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/reset.css">
+    <script src="js/read.js" defer></script>
+    <title>閲読ノート</title>
+</head>
+<body>
+    <div class="header">
+           <div class="logo">
+              <a href="home.html"><img src="./img/logo.png"></a>
+           </div>
+    
+          <div class="user">
+            <img src="./img/wolf.png" onclick="location.href='user.html'">
+          </div>
+      </div>
+
+      <h2>閲読ノート</h2>
+
+    
+        <div class="read-wrapper">
+
+    <!-- 右侧主内容 -->
+    <div class="read-main">
+
+        <!-- 标题栏 -->
+        <div class="read-header">
+            <div class="left-header">
+                <button onclick="prevArticle()">◀</button>
+                <span>文章</span>
+                <button onclick="nextArticle()">▶</button>
+                <button onclick="addArticle()">追加</button>
+                <button onclick="deleteArticle()">🗑</button>
+                <span id="pageInfo"></span>
+            </div>
+
+            <div class="right-header">
+                メモ
+            </div>
+        </div>
+
+        <!-- 内容 -->
+        <div class="read-container">
+            <textarea id="articleInput" placeholder="文章を入力"></textarea>
+            <textarea id="noteInput" placeholder="メモを入力"></textarea>
+        </div>
+
+    </div>
+</div>
+
+
+</body>
+</html>

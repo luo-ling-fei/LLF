@@ -1,0 +1,13 @@
+{
+	"folders": [
+		{
+			"path": ".."
+		},
+		{
+			"path": "../../../食品/mcc_新"
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "sp_副本"
+	}
+}

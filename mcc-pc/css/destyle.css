@@ -1,0 +1,409 @@
+@import url(https://fonts.googleapis.com/earlyaccess/notosansjapanese.css);
+/*フォントウェイト　100,300,350,400,500,700,900*/
+
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1.5;
+    -webkit-text-size-adjust: 100%;
+    font-family: 'Noto Sans Japanese', sans-serif;
+    
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+* {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+img{
+    vertical-align: bottom;
+}
+
+
+/*
+=====================================================
+よく使用するクラス等
+=====================================================
+*/
+
+a {
+    text-decoration: none;
+    color: #333333;
+}
+a:hover{
+    text-decoration: underline;
+     -webkit-transition: 0.3s ease-in-out;
+    -moz-transition: 0.3s ease-in-out;
+    -o-transition: 0.3s ease-in-out;
+    transition: 0.3s ease-in-out;
+}
+
+a img {
+    -webkit-transition: 0.3s ease-in-out;
+    -moz-transition: 0.3s ease-in-out;
+    -o-transition: 0.3s ease-in-out;
+    transition: 0.3s ease-in-out;
+}
+
+a img:hover {
+    opacity: 0.6;
+    filter: alpha(opacity=60);
+}
+
+.clear {
+    clear: both;
+    line-height: 0px;
+}
+
+.clearfix:after {
+    content: ".";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+}
+
+.clearfix {
+    display: inline-table;
+    overflow: hidden;
+    zoom: 1;
+    /*for IE 5.5-7*/
+}
+
+
+/* Hides from IE-mac \*/
+
+.clearfix {
+    display: block;
+}
+
+
+/* End hide from IE-mac */
+
+.img_left {
+    float: left;
+    margin-right: 45px;
+    margin-bottom: 15px;
+}
+
+.img_right {
+    float: right;
+    margin-left: 45px;
+    margin-bottom: 20px;
+}
+.img_fit{
+    width: 100%;
+    height: auto;
+}
+
+.txt_right {
+    text-align: right;
+}
+
+.txt_left {
+    text-align: left;
+}
+
+.txt_center {
+    text-align: center;
+}
+
+.v_align_bottom {
+    vertical-align: bottom;
+}
+
+
+.mb_5 {
+    margin-bottom: 5px !important;
+}
+
+.mb_10 {
+    margin-bottom: 10px !important;
+}
+
+.mb_15 {
+    margin-bottom: 15px !important;
+}
+
+.mb_20 {
+    margin-bottom: 20px !important;
+}
+
+.mb_25 {
+    margin-bottom: 25px !important;
+}
+
+.mb_30 {
+    margin-bottom: 30px !important;
+}
+
+.mb_35 {
+    margin-bottom: 35px !important;
+}
+
+.mb_40 {
+    margin-bottom: 40px !important;
+}
+
+.mb_50 {
+    margin-bottom: 50px !important;
+}
+
+.mb_60 {
+    margin-bottom: 60px !important;
+}
+
+.mb_80 {
+    margin-bottom: 80px !important;
+}
+
+.mb_100 {
+    margin-bottom: 100px !important;
+}
+
+.mb_150 {
+    margin-bottom: 150px !important;
+}
+
+.mb_200 {
+    margin-bottom: 200px !important;
+}
+
+.mt_5 {
+    margin-top: 5px !important;
+}
+
+.mt_10 {
+    margin-top: 10px !important;
+}
+
+.mt_15 {
+    margin-top: 15px !important;
+}
+
+.mt_20 {
+    margin-top: 20px !important;
+}
+
+.mt_25 {
+    margin-top: 25px !important;
+}
+
+.mt_50 {
+    margin-top: 50px !important;
+}
+
+.mt_75 {
+    margin-top: 75px !important;
+}
+
+.mt_100 {
+    margin-top: 100px !important;
+}
+
+.mr_0 {
+    margin-right: 0px !important;
+}
+
+.mr_10 {
+    margin-right: 10px !important;
+}
+
+.mr_15 {
+    margin-right: 15px !important;
+}
+
+.mr_20 {
+    margin-right: 20px !important;
+}
+
+.mr_30 {
+    margin-right: 30px !important;
+}
+
+.mr_50 {
+    margin-right: 50px !important;
+}
+
+.pl_10 {
+    padding-left: 10px !important;
+}
+
+.pl_20 {
+    padding-left: 20px !important;
+}
+
+.pl_30 {
+    padding-left: 30px !important;
+}
+
+.pl_50 {
+    padding-left: 50px !important;
+}
+
+.pl_75 {
+    padding-left: 75px !important;
+}
+
+.pl_100 {
+    padding-left: 100px !important;
+}
+.font_sss {
+    font-size: 8px;
+}
+
+.font_ss {
+    font-size: 10px;
+}
+
+.font_s {
+    font-size: 13px;
+}
+
+.font_m {
+    font-size: 15px;
+}
+
+.font_l {
+    font-size: 18px;
+}
+
+.font_ll {
+    font-size: 20px;
+}
+
+.font_3l {
+    font-size: 25px;
+}
+
+.font_4l {
+    font-size: 30px;
+}
+
+.font_5l {
+    font-size: 50px;
+}
+
+.font_it {
+    font-family: Helvetica, Arial, sans-serif;
+    font-style: italic;
+}
+
+.font_cap {
+    font-size: 10px;
+    line-height: 1.3;
+    margin-top: 20px;
+}
+.ptop {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    z-index: 11;
+}
+
+.ptop img {
+    filter: Alpha(Opacity=50);
+    -moz-opacity: 0.5;
+    opacity: 0.5;
+}
+
+.ptop img:hover {
+    filter: Alpha(Opacity=100);
+    -moz-opacity: 1;
+    opacity: 1;
+    cursor: pointer;
+}
+
+#fb-root {
+    display: none;
+}
+
+.sp{
+    display: none;
+}
+@media screen and (max-width:767px) {
+    .pc{
+        display: none;
+    }
+    .sp{
+        display: block;
+    }
+    .ptop {
+        bottom: 2%;
+        right: 2%;
+        z-index: 9999;
+    }
+    .pic100p {
+        width: 100%;
+    }
+    .pic90p {
+        width: 90%;
+    }
+    .pic80p {
+        width: 80%;
+    }
+    .pic70p {
+        width: 70%;
+    }
+    .pic60p {
+        width: 60%;
+    }
+    .pic50p {
+        width: 50%;
+    }
+    .pic40p {
+        width: 40%;
+    }
+    .pic30p {
+        width: 30%;
+    }
+    .pic20p {
+        width: 20%;
+    }
+    .pic10p {
+        width: 10%;
+    }
+}

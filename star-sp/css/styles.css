@@ -1,0 +1,515 @@
+html {
+  scroll-padding-top: 100px;
+  scroll-behavior: smooth;
+}
+html, body {overscroll-behavior: none;}
+
+
+
+body {
+  margin: 0;
+  padding: 0;
+  font-size: 16px;
+}
+
+.container {
+  width: 100%;
+  max-width: 390px;
+  margin: 0 auto;
+}
+
+.logo{
+  width: 130px;
+  height: 0 auto;
+  margin: 0 auto;
+}
+.logo1{
+  width: 40px;
+  height: 0 auto;
+  margin-top: 20px;
+  margin-right: 15px;
+}
+.top1{display: flex;}
+.top{
+  width: 390px;
+  margin: 0 auto;
+  background-color: rgb(7, 31, 97);
+  padding: 4px;
+  position: fixed;
+  z-index: 5;
+}
+
+
+
+
+
+.navigation {
+  position: fixed;
+  top: -150px;
+  left: 0;
+  width: 100%;
+  background: transparent;   
+  transition: top 0.3s ease;
+  z-index: 1000;
+}
+.nav-inner {
+  max-width: 390px;
+  margin: 0 auto;
+  padding: 5px;
+  text-align: center;
+  background-color: rgba(204, 235, 255, 0.6); 
+}
+.navigation table{margin: 0 auto;}
+.navigation img{
+  width: 60px;
+  height:0 auto;
+}
+.navigation th,td{padding:5px;}
+.navigation td{
+  color: rgb(11, 22, 108);
+  font-weight: bolder;
+   text-shadow: 2px 2px 2px rgb(255, 255, 255)
+}
+
+.navigation.show {
+  top: 60px;   /* 在 top 区域下方，根据你的 header 调整 */
+}
+
+
+
+
+
+
+.herd{
+  min-height: 100vh;
+  background: url(../img/background1.png) center / cover no-repeat;
+  background-size: cover;
+}
+
+.herd1-text {
+  color: rgb(255, 246, 150);
+  text-align: center;
+  text-shadow: 2px 2px 2px rgb(60, 59, 59);
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 1.2s ease, transform 1.2s ease;
+  z-index: 4;
+}
+.herd1 {
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+}
+.herd1-text.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.scroll-hint {
+  margin-top: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+.scroll-hint.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+.triangle {
+  width: 0;
+  height: 0;
+  border-left: 8px solid transparent;
+  border-right: 8px solid transparent;
+  border-top: 12px solid rgb(255, 246, 150);
+  filter: drop-shadow(2px 2px 2px rgba(60, 59, 59, 0.6));
+  margin-top: 6px;
+  animation: bounce 1.6s ease-in-out infinite;
+  z-index: 3;
+}
+
+@keyframes bounce {
+  0%   { transform: translateY(0); }
+  50%  { transform: translateY(8px); }
+  100% { transform: translateY(0); }
+}
+
+
+.stars-bg {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+.bg-star {
+  position: absolute;
+  width: 6px;
+  height: 6px;
+  background: rgb(255, 249, 179);
+  border-radius: 50%;
+
+  opacity: 0;
+  transform: scale(0.5);
+}
+
+@keyframes twinkle {
+  0%, 100% { opacity: 0.3; }
+  50% { opacity: 1; }
+}
+
+.stars-bg.hide .bg-star {
+  opacity: 0;
+  transform: scale(0);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+
+
+
+
+
+
+
+.star{
+  background-color:rgb(18, 9, 54) ;
+  padding: 25px;
+}
+.title1{
+  padding: 15px;
+  text-align: center;
+  color: rgb(69, 69, 250);
+  font-weight: bold;
+  letter-spacing:5px ;
+  text-shadow:
+    0 0 1px rgb(249, 249, 63),
+    -1px -1px 0  rgb(254, 254, 184),
+     1px -1px 0  rgb(254, 254, 184),
+    -1px  1px 0  rgb(254, 254, 184),
+     1px  1px 0  rgb(254, 254, 184);
+}
+
+
+
+.star1 {
+  position: relative;
+  width: 100%;
+  max-width: 320px;
+  aspect-ratio: 1 / 1;
+  margin: 40px auto;
+  margin-top: -10px;
+  --orbit-radius: 80px;/*旋转半径*/
+}
+
+.star2 {
+  position: absolute;
+  inset: 0;
+  transform: scaleX(1.25) scaleY(0.85);
+  animation: ellipseSpin 36s linear infinite;
+}
+
+.orbit {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform-origin: 0 0;
+}
+.orbit img {
+  width: 50px;
+  height: auto;
+  animation:
+    starFix 36s linear infinite,
+    starTwinkle 3s ease-in-out infinite alternate;
+}
+@keyframes starTwinkle {
+  from {
+    filter:
+      brightness(1.2)
+      drop-shadow(0 0 6px rgba(255, 255, 200, 0.6));
+  }
+  to {
+    filter:
+      brightness(1.5)
+      drop-shadow(0 0 10px rgba(255, 255, 220, 0.9));
+  }
+}
+
+
+@keyframes starFix {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(-360deg); }
+}
+
+
+.sun {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+}
+
+.sun img {
+  width: 40px;
+  filter:
+    brightness(1.4)
+    drop-shadow(0 0 12px rgba(255, 230, 120, 0.9))
+    drop-shadow(0 0 28px rgba(255, 200, 80, 0.6));
+  animation: sunPulse 4s ease-in-out infinite;
+}
+@keyframes sunPulse {
+  0%, 100% {
+    filter:
+      brightness(1.4)
+      drop-shadow(0 0 12px rgba(255, 230, 120, 0.9))
+      drop-shadow(0 0 28px rgba(255, 200, 80, 0.6));
+  }
+  50% {
+    filter:
+      brightness(1.6)
+      drop-shadow(0 0 18px rgba(255, 240, 160, 1))
+      drop-shadow(0 0 36px rgba(255, 210, 100, 0.8));
+  }
+}
+
+
+@keyframes ellipseSpin {
+  from {
+    transform: scaleX(1.25) scaleY(0.85) rotate(0deg);
+  }
+  to {
+    transform: scaleX(1.25) scaleY(0.85) rotate(360deg);
+  }
+}
+
+.orbit:nth-child(1)  { transform: rotate(0deg)   translate(var(--orbit-radius));}
+.orbit:nth-child(2)  { transform: rotate(30deg)  translate(var(--orbit-radius));}
+.orbit:nth-child(3)  { transform: rotate(60deg)  translate(var(--orbit-radius));}
+.orbit:nth-child(4)  { transform: rotate(90deg)  translate(var(--orbit-radius));}
+.orbit:nth-child(5)  { transform: rotate(120deg) translate(var(--orbit-radius));}
+.orbit:nth-child(6)  { transform: rotate(150deg) translate(var(--orbit-radius));}
+.orbit:nth-child(7)  { transform: rotate(180deg) translate(var(--orbit-radius));}
+.orbit:nth-child(8)  { transform: rotate(210deg) translate(var(--orbit-radius));}
+.orbit:nth-child(9)  { transform: rotate(240deg) translate(var(--orbit-radius));}
+.orbit:nth-child(10) { transform: rotate(270deg) translate(var(--orbit-radius));}
+.orbit:nth-child(11) { transform: rotate(300deg) translate(var(--orbit-radius));}
+.orbit:nth-child(12) { transform: rotate(330deg) translate(var(--orbit-radius));}
+
+
+
+
+.big_box{
+  background-image: url(../img/background.png);
+  background-size: cover;
+  padding: 25px;
+  margin-top: -40px;
+}
+.big_box2{margin-top: 20px;}
+.star h1{
+  text-align: center;
+  color: rgb(69, 69, 250);
+  font-weight: bold;
+  letter-spacing:3px ;
+  text-shadow:
+    0 0 2px rgb(249, 249, 63),
+    -2px -2px 0  rgb(254, 254, 184),
+     2px -2px 0  rgb(254, 254, 184),
+    -2px  2px 0  rgb(254, 254, 184),
+     2px  2px 0  rgb(254, 254, 184);
+}
+.text1,.text2,.text3,.text4,.text5,.text6,.text7,.text8,.text9,.text10,.text11,.text12{
+  width: 450px;
+  margin: 0 auto;
+}
+.box1,.box2,.box3,.box4,.box5,.box6,.box7,.box8,.box9,.box10,.box11,.box12{
+  display: flex;
+  gap: 50px;
+  padding: 20px;
+}
+.big_box h4, h5, h6{
+  color: rgb(255, 255, 255);
+  text-shadow: 1px 1px 1px rgb(0, 0, 0);
+}
+.big_box h4, h5{font-weight: bold;}
+.big_box img{
+    width: 250px;
+    margin: 0 auto;
+}
+.star_{
+  background-image: url(../img/background2.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 10px;
+}
+
+  
+
+/* 固定显示区域 */
+.big_box2 {
+  position: relative;
+  width: 100%;
+  height: 600px;     /* 根据设计调整 */
+  overflow: hidden;
+}
+
+/* 容器 */
+.slider-track {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+/* 页面叠放 */
+.slide-page {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.5s ease;
+}
+
+/* 当前页面 */
+.slide-page.active1 {
+  opacity: 1;
+  pointer-events: auto;
+  z-index: 2;
+}
+
+/* 下方圆点 */
+.big_box3 {
+  display: flex;
+  justify-content: center;
+  gap: 14px;
+  margin-top: 24px;
+}
+
+.big_box3 span {
+  width: 10px;
+  height: 10px;
+  background: #666;
+  border-radius: 50%;
+}
+
+/* 当前页圆点 → 白色 */
+.big_box3 span.active1 {
+  background: #fff;
+}
+
+
+
+
+
+
+
+.lucky-{margin-top: 40px;}
+.fortune-card {
+  width: 337px;
+  padding: 20px;
+  background: #d5b3dd;
+  border-radius: 40px;
+  text-align: center;
+  justify-content: center
+}
+
+.title {
+  color: #1f3fff;
+}
+
+#stars {
+  font-size: 24px;
+  color: gold;
+  margin: 10px 0;
+}
+
+.bar {
+  display: flex;
+  align-items: center;
+  margin: 20px 0;
+}
+
+.bar span {
+  width: 60px;
+}
+
+.progress {
+  flex: 1;              /* 在 bar 内占固定比例 */
+  height: 10px;         /* ⭐ 高度固定 */
+  background: #fff;     /* 白色轨道 */
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.fill {
+  height: 100%;
+  width: 0;             /* 初始值 */
+  background: gold;
+  transition: width 0.4s ease;
+}
+
+
+
+
+.talo{margin-top: 40px;}
+
+.talo1 {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(80px, 1fr));
+  gap: 12px;
+  justify-items: center;
+  border: 1px solid rgb(85, 85, 133);
+  background-color:rgb(85, 85, 133);
+  padding: 15px;
+  border-radius: 30px;
+}
+
+.talo1 img {
+  width: 100%;
+  max-width: 100px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+
+/*图片点击放大*/
+.img-modal {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.6);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+.img-modal img {
+  max-width: 50%;
+  max-height: 50%;
+  border-radius: 12px;
+}
+
+
+
+
+.last{
+  background-color: rgba(21, 26, 62, 1);
+  padding: 20px;
+}
+.last p{
+  font-size: 12px;
+  color: #fff;
+  text-align: center;
+  padding: 10px;
+}
+.sns {
+  display: flex;
+  margin: 0 auto;
+  gap: 15px;
+  justify-content: center;
+}
+.sns img{
+   width: 40px;
+   height: 0 auto;
+}
