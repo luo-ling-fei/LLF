@@ -409,6 +409,7 @@ body {
 .fortune-card {
   width: 90%;
   max-width: 337px;
+  margin: 0 auto;
   padding: 20px;
   background: #d5b3dd;
   border-radius: 40px;
