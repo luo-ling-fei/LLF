@@ -320,8 +320,7 @@ body {
      2px  2px 0  rgb(254, 254, 184);
 }
 .text1,.text2,.text3,.text4,.text5,.text6,.text7,.text8,.text9,.text10,.text11,.text12{
-  width: 100%;
-  max-width: 450px;
+  width: 450px;
   margin: 0 auto;
 }
 .box1,.box2,.box3,.box4,.box5,.box6,.box7,.box8,.box9,.box10,.box11,.box12{
