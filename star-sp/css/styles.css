@@ -1,7 +1,6 @@
 html {
   scroll-padding-top: 100px;
   scroll-behavior: smooth;
-  overflow-x: hidden; 
 }
 
 
@@ -32,8 +31,7 @@ body {
 }
 .top1{display: flex;}
 .top{
-  width: 100%;
-  max-width: 390px;
+  width: 390px;
   margin: 0 auto;
   background-color: rgb(7, 31, 97);
   padding: 4px;
