@@ -240,6 +240,7 @@ h2{
     gap:10px;
     padding:15px 20px;
     border-right:1px solid #aaa;
+    flex-wrap: wrap;
 }
 
 /* 右 */
@@ -251,7 +252,7 @@ h2{
 
 /* 按钮 */
 .left-header button{
-    padding:5px 30px;
+    padding:5px 10px;
     background:#3A6FF7;
     color:#fff;
     border:none;
