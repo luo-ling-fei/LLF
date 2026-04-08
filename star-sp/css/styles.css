@@ -443,7 +443,7 @@ body {
 
 .progress {
   flex: 1;              /* 在 bar 内占固定比例 */
-  height: 10px;         /* ⭐ 高度固定 */
+  height: 10px;         /* 高度固定 */
   background: #fff;     /* 白色轨道 */
   border-radius: 5px;
   overflow: hidden;
