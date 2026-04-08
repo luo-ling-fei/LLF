@@ -10,7 +10,7 @@ html, body {overscroll-behavior: none;}
     height: auto;
 }
 .header1{
-    width: 1000px;
+    width: 1200px;
     margin: 0 auto;
     display: flex;
     flex-direction: column;
@@ -41,7 +41,7 @@ html, body {overscroll-behavior: none;}
   background-color:rgba(254, 236, 162, 1) ;
 }
 .box1-1{
-  width: 1000px;
+  width: 1200px;
     margin: 0 auto;
     display: flex;
     flex-direction: column;
@@ -121,7 +121,7 @@ html, body {overscroll-behavior: none;}
     background-color: rgba(255, 250, 213, 1);
 }
 .box2-1{
-    width: 1000px;
+    width: 1200px;
     margin: 0 auto;
     display: flex;
     flex-direction: column;
@@ -146,7 +146,7 @@ html, body {overscroll-behavior: none;}
 .box2-1 span{margin-left: 10px;}
 .last{background-color: rgba(254, 236, 162, 1) ;}
 .last1{
-    width: 1000px;
+    width: 1200px;
     margin: 0 auto;
     display: flex;
     flex-direction: column;
